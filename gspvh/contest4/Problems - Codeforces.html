@@ -1,0 +1,994 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- saved from url=(0077)https://gspvh.contest.codeforces.com/group/8uwwWH0E98/contest/307810/problems -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="X-Csrf-Token" content="7e4ba5ebbb8ace1811af76c4a64656f6">
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01">
+
+
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery-1.8.3.js.tải xuống"></script>
+    <script type="application/javascript">
+        window.standaloneContest = true;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+
+        /* Protection against trailing dot in domain. */
+        let hostLength = window.location.host.length;
+        if (hostLength > 1 && window.location.host[hostLength - 1] === '.') {
+            window.location = window.location.protocol + "//" + window.location.host.substring(0, hostLength - 1);
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="h3">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90">
+    <meta property="fb:admins" content="100001352546622">
+    <meta property="og:image" content="/static/images/codeforces-telegram-square.png">
+    <link rel="image_src" href="https://gspvh.contest.codeforces.com/static/images/codeforces-telegram-square.png">
+    <meta property="og:title" content="Problems - Codeforces">
+    <meta property="og:description" content="">
+    
+    <meta property="og:site_name" content="Codeforces">
+    
+    
+    
+    
+    
+    
+    <meta name="utc_offset" content="+03:00">
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2">
+    <title>Problems - Codeforces</title>
+        <meta name="description" content="Codeforces. Programming competitions and contests, programming community">
+        <meta name="keywords" content="programming algorithm contest competition informatics olympiads c++ java graphs vkcup">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="./Problems - Codeforces_files/font-awesome.min.css" type="text/css" charset="utf-8">
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://gspvh.contest.codeforces.com/static/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://gspvh.contest.codeforces.com/static/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://gspvh.contest.codeforces.com/static/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://gspvh.contest.codeforces.com/static/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://gspvh.contest.codeforces.com/static/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gspvh.contest.codeforces.com/static/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://gspvh.contest.codeforces.com/static/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://gspvh.contest.codeforces.com/static/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://gspvh.contest.codeforces.com/static/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://gspvh.contest.codeforces.com/static/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://gspvh.contest.codeforces.com/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://gspvh.contest.codeforces.com/static/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://gspvh.contest.codeforces.com/static/favicon-16x16.png">
+    <link rel="manifest" href="https://gspvh.contest.codeforces.com/static/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/static/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="./Problems - Codeforces_files/prettify.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/clear.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/style.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/ttypography.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/problem-statement.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/second-level-menu.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/roundbox.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/datatable.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/table-form.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/topic.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/jquery.jgrowl.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/facebox.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/jquery.wysiwyg.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/jquery.autocomplete.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/codeforces.datepick.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/colorbox.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/jquery.drafts.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="./Problems - Codeforces_files/community.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="./Problems - Codeforces_files/groups.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="./Problems - Codeforces_files/sidebar-menu.css" type="text/css" charset="utf-8">
+
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+    });
+    MathJax.Hub.Register.StartupHook("End", function () {
+        Codeforces.runMathJaxListeners();
+    });
+    </script>
+    <script type="text/javascript" async="" src="./Problems - Codeforces_files/MathJax.js.tải xuống">
+    </script>
+    <!-- /MathJax -->
+
+    <script type="text/javascript" src="./Problems - Codeforces_files/prettify.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/moment-with-locales.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/pushstream.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.easing.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.lavalamp.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.jgrowl.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.swipe.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.hotkeys.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/facebox.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.wysiwyg.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/wysiwyg.colorpicker.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/wysiwyg.table.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/wysiwyg.image.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/wysiwyg.link.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.autocomplete.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/ua-parser.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.datepick.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.ie6blocker.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.colorbox-min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.ba-bbq.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.drafts.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/clipboard.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/autosize.min.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/sjcl.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/codeforces-options.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/codeforces.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/EventCatcher.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/preparedVerdictFormats-en.js.tải xuống"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="./Problems - Codeforces_files/style(1).css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./Problems - Codeforces_files/style(2).css" type="text/css" charset="utf-8">
+
+
+    <script type="text/javascript" src="./Problems - Codeforces_files/jquery.markitup.js.tải xuống"></script>
+    <script type="text/javascript" src="./Problems - Codeforces_files/set.js.tải xuống"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none; box-sizing: content-box}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.MathJax_test.mjx-test-display {display: table!important}
+.MathJax_test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.MathJax_test.mjx-test-default {display: block!important; clear: both}
+.MathJax_ex_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.MathJax_em_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60em}
+.mjx-test-inline .MathJax_left_box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .MathJax_right_box {display: inline-block; width: 0; float: right}
+.mjx-test-display .MathJax_right_box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.5') format('woff'), url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.5') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.5') format('woff'), url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.5') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.5') format('woff'), url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.5') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.5') format('woff'), url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.5') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.5') format('woff'), url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.5') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.5') format('woff'), url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.5') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.5') format('woff'), url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.5') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.5') format('woff'), url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.5') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.5') format('woff'), url('https://gspvh.contest.codeforces.com/static/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.5') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body class=" "><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div><span style="display:none;" class="csrf-token" data-csrf="7e4ba5ebbb8ace1811af76c4a64656f6">&nbsp;</span>
+
+<!-- .notificationTextCleaner used in Codeforces.showAnnouncements() -->
+<div class="notificationTextCleaner" style="font-size: 0"></div>
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 3.0rem;"><i class="icon-circle-arrow-up"></i></div>
+<div class="verdictPrototypeDiv" style="display: none;"></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    String.prototype.hashCode = function() {
+        var hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return hash;
+    };
+
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile === "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 700
+        });
+    }, 100);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+        var count = 0;
+
+        function getDelay() {
+            var delay = 0;
+            var last = Codeforces.getFromStorage("LastOnlineTimeUpdaterMillis", 0);
+            if (last && last != null) {
+                var period = count < 20 ? 180 * 1000 : 360 * 1000;
+                delay = period - (new Date().getTime() - last);
+                if (delay < 0)
+                    delay = 0;
+            }
+            return delay;
+        }
+
+        window.setInterval(function () {
+            if (getDelay() <= 0 && count < 120) {
+                ++count;
+                Codeforces.ping("/data/update-online");
+            }
+        }, 5000);
+
+        var handle = "g4037=dna_11_minhhieu";
+        $("a.rated-user:contains(" + handle + "), span.participant:contains(" + handle + ")").each(function () {
+            if ($(this).text() == handle) {
+                var td = $(this).parent();
+                var tr = $(this).parent().parent();
+                if (td.is("td") && tr.is("tr")) {
+                    tr.addClass("highlighted-row");
+                }
+            }
+        });
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "en");
+        }, Math.random() * 500);
+    }
+
+    function showEventCatcherUserMessage(json) {
+        if (json.t == "s") {
+            var points = json.d[5];
+            var passedTestCount = json.d[7];
+            var judgedTestCount = json.d[8];
+            var verdict = preparedVerdictFormats[json.d[12]];
+            var verdictPrototypeDiv = $(".verdictPrototypeDiv");
+            verdictPrototypeDiv.html(verdict);
+            if (judgedTestCount != null && judgedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-judged").text(judgedTestCount);
+            }
+            if (passedTestCount != null && passedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-passed").text(passedTestCount);
+            }
+            if (points != null && points != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-points").text(points);
+            }
+            Codeforces.showMessage(verdictPrototypeDiv.text());
+        }
+    }
+
+    $(".clickable-title").each(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            var tmp = document.createElement("DIV");
+            tmp.innerHTML = title;
+            $(this).attr("title", tmp.textContent || tmp.innerText || "");
+        }
+    });
+
+    $(".clickable-title").click(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            Codeforces.alert(title);
+        } else {
+            Codeforces.alert($(this).attr("title"));
+        }
+    }).css("position", "relative").css("bottom", "3px");
+
+        Codeforces.showDelayedMessage();
+
+    Codeforces.reformatTimes();
+
+    //Codeforces.initializePubSub();
+    if (window.codeforcesOptions.subscribeServerUrl) {
+        window.eventCatcher = new EventCatcher(
+            window.codeforcesOptions.subscribeServerUrl,
+            [
+                Codeforces.getGlobalChannel(),
+                Codeforces.getUserChannel(),
+                Codeforces.getUserShowMessageChannel(),
+                Codeforces.getContestChannel(),
+                Codeforces.getParticipantChannel(),
+                Codeforces.getTalkChannel()
+            ]
+        );
+
+        if (Codeforces.getParticipantChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getParticipantChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getContestChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getContestChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getGlobalChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getGlobalChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserShowMessageChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserShowMessageChannel(), function(json) {
+                showEventCatcherUserMessage(json);
+            });
+        }
+    }
+
+    Codeforces.setupContestTimes("/group/8uwwWH0E98/data/contests");
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+
+
+<div id="body">
+<div style="width: 950px; margin: 0 auto;" class="compact-problemset">
+    <div id="header" style="position: relative;">
+        <div style="float:left;">
+                  <a href="https://gspvh.contest.codeforces.com/"><img src="./Problems - Codeforces_files/codeforces-logo-with-telegram.png"></a>
+        </div>
+        <div class="lang">
+            <div style="text-align: right;">
+                <a href="https://gspvh.contest.codeforces.com/group/8uwwWH0E98/contest/307810/problems?locale=en"><img src="./Problems - Codeforces_files/gb.png" title="In English" alt="In English"></a>
+                <a href="https://gspvh.contest.codeforces.com/group/8uwwWH0E98/contest/307810/problems?locale=ru"><img src="./Problems - Codeforces_files/ru.png" title="По-русски" alt="По-русски"></a>
+            </div>
+        </div>
+        <br style="clear: both;">
+    </div>
+
+    <div style="text-align: center; font-size: 1.8rem; margin-bottom: 0.5em;" class="caption">2020 autumn training episode 88, round M4 (read the announcement carefully before submitting)</div>
+    <div style="border-top: 1px solid #ccc; height: 1em;"></div>
+
+    <div class="problem-frames">
+        <div style="margin-bottom: 2em;">
+
+    <style>
+        #facebox .content:has(.diff-popup) {
+            width: 90vw;
+            max-width: 120rem !important;
+        }
+
+        .diff-popup {
+            width: 90vw;
+            max-width: 120rem !important;
+            display: none;
+            overflow: auto;
+        }
+
+        .input-output-copier {
+            font-size: 1.2rem;
+            float: right;
+            color: #888 !important;
+            cursor: pointer;
+            border: 1px solid rgb(185, 185, 185);
+            padding: 3px;
+            margin: 1px;
+            line-height: 1.1rem;
+            text-transform: none;
+        }
+
+        .input-output-copier:hover {
+            background-color: #def;
+        }
+
+        .test-explanation textarea {
+            width: 100%;
+            height: 1.5em;
+        }
+
+        .pending-submission-message {
+            color: darkorange !important;
+        }
+    </style>
+    <script>
+        const OPENING_SPACE = String.fromCharCode(1001);
+        const CLOSING_SPACE = String.fromCharCode(1002);
+
+        const nodeToText = function (node, pre) {
+            let result = [];
+
+            if (node.tagName === "SCRIPT" || node.tagName === "math"
+                || (node.classList && node.classList.contains("input-output-copier")))
+                return [];
+
+            if (node.tagName === "NOBR") {
+                result.push(OPENING_SPACE);
+            }
+
+            if (node.nodeType === Node.TEXT_NODE) {
+                let s = node.textContent;
+                if (!pre) {
+                    s = s.replace(/\s+/g, " ");
+                }
+                if (s.length > 0) {
+                    result.push(s);
+                }
+            }
+
+            if (pre && node.tagName === "BR") {
+                result.push("\n");
+            }
+
+            node.childNodes.forEach(function (child) {
+                result.push(nodeToText(child, node.tagName === "PRE").join(""));
+            });
+
+            if (node.tagName === "DIV"
+                || node.tagName === "P"
+                || node.tagName === "PRE"
+                || node.tagName === "UL"
+                || node.tagName === "LI"
+            ) {
+                result.push("\n");
+            }
+
+            if (node.tagName === "NOBR") {
+                result.push(CLOSING_SPACE);
+            }
+
+            return result;
+        }
+
+        const isSpecial = function (c) {
+            return c === ',' || c === '.' || c === ';' || c === ')' || c === ' ';
+        }
+
+        const convertStatementToText = function(statmentNode) {
+            const text = nodeToText(statmentNode, false).join("").replace(/ +/g, " ").replace(/\n\n+/g, "\n\n");
+            let result = [];
+            for (let i = 0; i < text.length; i++) {
+                const c = text.charAt(i);
+                if (c === OPENING_SPACE) {
+                    if (!((i > 0 && text.charAt(i - 1) === '(') || (result.length > 0 && result[result.length - 1] === ' '))) {
+                        result.push('+');
+                    }
+                } else if (c === CLOSING_SPACE) {
+                    if (!(i + 1 < text.length && isSpecial(text.charAt(i + 1)))) {
+                        result.push('-');
+                    }
+                } else {
+                    result.push(c);
+                }
+            }
+            return result.join("").split("\n").map(value => value.trim()).join("\n");
+        };
+    </script>
+    <div class="diff-popup">
+    </div>
+
+<div class="problemindexholder" problemindex="A" data-uuid="ps_8c42684e284187bf3b3b083c004250c6ec7d7b2d">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://gspvh.contest.codeforces.com/group/8uwwWH0E98/contest/307810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div style="padding:1em;margin:1em 14em 0 14em;text-align: center;" class="alert alert-info">
+            Statement is not available on English language
+        </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">A. ICPC</div><div class="time-limit"><div class="property-title">time limit per test</div>0.25 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>16 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>icpc.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>icpc.out</div></div><div><p>Kỳ thi Lập trình sinh viên quốc tế ICPC (<span class="tex-font-style-it">International Collegiate Programming Contest</span>) là kỳ thi lập trình lớn nhất và uy tín nhất dành cho khối sinh viên đại học trên toàn thế giới. Kể từ khi được thành lập vào năm <span class="tex-span">1970</span>, kỳ thi ICPC đã thu hút hơn <span class="tex-span">50</span> ngàn sinh viên đến từ hơn <span class="tex-span">3</span> ngàn trường đại học trên thế giới tham gia tranh tài ở các vòng loại khu vực, để chọn ra <span class="tex-span">128</span> đội mạnh nhất thi đấu tại trận Chung kết thế giới (<span class="tex-font-style-it">ICPC World Finals</span>) diễn ra vào tháng <span class="tex-span">4 - 6</span> hàng năm. Tại Việt Nam, mùa thi ICPC được diễn ra từ tháng <span class="tex-span">10</span> tới tháng <span class="tex-span">12</span>, gồm <span class="tex-span">5</span> vòng thi chính thức: <span class="tex-span">3</span> vòng loại <span class="tex-span">3</span> miền Bắc&nbsp;— Trung&nbsp;— Nam, <span class="tex-span">1</span> vòng loại quốc gia và <span class="tex-span">1</span> vòng loại khu vực châu Á. Phong trào ICPC tại Việt Nam ngày càng lớn mạnh và thu hút được hơn <span class="tex-span">700</span> sinh viên công nghệ thông tin và gần <span class="tex-span">100</span> học sinh chuyên tin trên cả nước trong năm <span class="tex-span">2019</span> vừa qua. Trường Đại Học Công Nghệ&nbsp;— Đại Học Quốc Gia Hà Nội là ngôi trường có thành tích xuất sắc áp đảo của cả nước, với <span class="tex-span">6</span> năm liên tiếp góp mặt tại vòng chung kết thê giới, và sở hữu ba đội tuyển Việt Nam có thứ hạng cao nhất trên thế giới từ trước tới nay: Đội <span class="tex-font-style-it">Unsigned</span>&nbsp;— xếp hạng <span class="tex-span">15</span> năm <span class="tex-span">2018</span>, đội <span class="tex-font-style-it">Byte</span>&nbsp;— xếp hạng <span class="tex-span">28</span> năm <span class="tex-span">2016</span> và đội <span class="tex-font-style-it">Linux</span>&nbsp;— xếp hạng <span class="tex-span">34</span> năm <span class="tex-span">2017</span>.</p><p>Theo thể lệ của kỳ thi ICPC, các thí sinh tranh tài theo hình thức đội <span class="tex-span">3</span> người, tham gia giải từ <span class="tex-span">10</span> đến <span class="tex-span">13</span> bài tập thuật toán trong vòng <span class="tex-span">300</span> phút (<span class="tex-span">5</span> giờ). Khác với các kỳ thi OI ở cấp THPT, thí sinh chỉ được ghi nhận điểm khi giải trọn vẹn một bài (đúng hoàn toàn bộ test hay AC) chứ không được điểm nếu có một phần test giải đúng. Ngoài số bài giải được, thành tích của thí sinh còn được tính bởi chỉ số thời gian phạt (<span class="tex-font-style-it">penalty</span>) như sau: Mỗi bài giải được (AC) sẽ đóng góp lượng penalty bằng số phút kể từ đầu cuộc thi tới thời điểm AC đầu tiên của bài đó, cộng thêm <span class="tex-span">20</span> phút cho mỗi lần nộp sai trước đó. Tổng penalty của một đội bằng tổng lượng penalty do các bài mà đội đó giải được đóng góp. Các bài không giải được cũng như những lần nộp sai ở các bài này không làm tăng penalty.</p><p>Ví dụ, nếu một đội giải được <span class="tex-span">3</span> bài tại các thời điểm <span class="tex-span">22</span> phút, <span class="tex-span">7</span> phút và <span class="tex-span">97</span> phút; với số lần nộp sai lần lượt là <span class="tex-span">0</span>, <span class="tex-span">1</span> và <span class="tex-span">2</span>. Khi đó, tổng penalty của đội sẽ là <span class="tex-span">22 + 7 + 97 + 20·(0 + 1 + 2) = 186</span>.</p><p>Đội nào giải được nhiều bài hơn là đội có thành tích cao hơn. Trong các đội có cùng số bài giải được, đội nào có penalty thấp hơn là đội có thứ hạng cao hơn. Trong các đội có cùng số bài giải được và cùng penalty, đội nào có thời điểm giải xong bài cuối cùng nhỏ hơn là đội chiến thắng.</p><p>Bước vào kỳ thi ICPC, GS.PVH cùng đồng đội nhanh chóng đọc hết <span class="tex-span"><i>n</i></span> bài trong đề. Ngay lập tức, GS nhận ra đội mình có thể làm hết cả <span class="tex-span"><i>n</i></span> bài trong đề, nhưng để làm bài thứ <span class="tex-span"><i>i</i></span> thì phải mất <span class="tex-span"><i>t</i><sub class="lower-index"><i>i</i></sub></span> phút và có thể không đủ thời gian làm hết các bài. Đồng thời, nhờ khả năng code cực chuẩn, GS tự tin rằng mình có thể AC ngay lần đầu tiên và không bao giờ chịu mất <span class="tex-span">20</span> phút penalty cho một lần nộp sai. Chỉ có một vấn đề duy nhất: Việc giải bất cứ bài nào phải cần cả ba thành viên cùng góp sức, do đó đội không thể làm việc trên hai bài trong cùng một thời điểm.</p><p>GS muốn tìm ra một tập hợp các bài để giải cùng thứ tự giải bài được chọn sao cho thành tích của đội là cao nhất: Số bài giải được là lớn nhất, penalty phải nhỏ nhất và thời điểm giải xong bài cuối cùng phải sớm nhất. Các bạn hãy giúp GS nhé.</p></div><div class="input-specification"><div class="section-title">Input</div><p>Dòng đầu tiên chứa số nguyên <span class="tex-span"><i>n</i></span> <span class="tex-span">(1 ≤ <i>n</i> ≤ 26)</span>&nbsp;— số bài trong kỳ thi. Dòng thứ hai chứa <span class="tex-span"><i>n</i></span> số nguyên <span class="tex-span"><i>t</i><sub class="lower-index">1</sub>, <i>t</i><sub class="lower-index">2</sub>, ..., <i>t</i><sub class="lower-index"><i>n</i></sub></span> <span class="tex-span">(1 ≤ <i>t</i><sub class="lower-index"><i>i</i></sub> ≤ 500)</span>, trong đó <span class="tex-span"><i>t</i><sub class="lower-index"><i>i</i></sub></span> là thời gian cần thiết để đội của GS giải bài thứ <span class="tex-span"><i>i</i></span>.</p></div><div class="output-specification"><div class="section-title">Output</div><p>Dòng đầu tiên ghi ra ba số nguyên <span class="tex-span"><i>s</i></span> <span class="tex-span"><i>p</i></span> <span class="tex-span"><i>l</i></span>&nbsp;— số bài đội của GS làm được, penalty của đội và thời điểm giải xong bài cuối cùng. Dòng thứ hai chứa một xâu ký tự gồm <span class="tex-span"><i>s</i></span> ký tự in hoa phân biệt, thể hiện thứ tự các bài được giải từ đầu cuộc thi. Các bài được ký hiệu bằng các chữ cái in hoa phân biệt: Bài đầu tiên là bài 'A', bài thứ hai là bài 'B', bài thứ ba là bài 'C'<span class="tex-span">...</span> Nếu có nhiều phương án tối ưu, bạn cần in ra xâu ký tự có thứ tự từ điển nhỏ nhất.</p></div><div class="sample-tests"><div class="section-title">Example</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id002951056645937713" id="id00012102156587321389" class="input-output-copier">Copy</div></div><pre id="id002951056645937713">5
+45 60 75 90 105
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id009364544931712828" id="id009831632483159995" class="input-output-copier">Copy</div></div><pre id="id009364544931712828">4 600 270
+ABCD
+</pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        window.changedTests = new Set();
+        console.log("Initialized window.changedTests.");
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+        String.prototype.replaceAll = function (search, replace) {
+            return this.split(search).join(replace);
+        };
+
+        $(".sample-test .title").each(function () {
+            var preId = ("id" + Math.random()).replaceAll(".", "0");
+            var cpyId = ("id" + Math.random()).replaceAll(".", "0");
+
+            $(this).parent().find("pre").attr("id", preId);
+            var $copy = $("<div title='Copy' data-clipboard-target='#" + preId + "' id='" + cpyId + "' class='input-output-copier'>Copy</div>");
+            $(this).append($copy);
+
+            var clipboard = new Clipboard('#' + cpyId, {
+                text: function (trigger) {
+                    return Codeforces.filterClipboardText(document.querySelector('#' + preId).innerText);
+                }
+            });
+
+            var isInput = $(this).parent().hasClass("input");
+
+            clipboard.on('success', function (e) {
+                if (isInput) {
+                    Codeforces.showMessage("The example input has been copied into the clipboard");
+                } else {
+                    Codeforces.showMessage("The example output has been copied into the clipboard");
+                }
+                e.clearSelection();
+            });
+        });
+
+        $(".test-form-item input").change(function () {
+            addPendingSubmissionMessage($($(this).closest("form")), "You changed the answer, do not forget to submit it if you want to save the changes");
+            var index = $(this).closest(".problemindexholder").attr("problemindex");
+            var test = "";
+            $(this).closest("form input").each(function () {
+                var test_ = $(this).attr("name");
+                if (test_ && test_.substring(0, 4) === "test") {
+                    test = test_;
+                }
+            });
+            if (index.length > 0 && test.length > 0) {
+                var indexTest = index + "::" + test;
+                window.changedTests.add(indexTest);
+            }
+        });
+
+        $(window).on('beforeunload', function () {
+            if (window.changedTests.size > 0) {
+                return 'Dialog text here';
+            }
+        });
+
+        autosize($('.test-explanation textarea'));
+
+    });
+</script>
+        </div>
+        <div style="margin-bottom: 2em;">
+
+
+<div class="problemindexholder" problemindex="B" data-uuid="ps_4e9e06d77c28f3827f65cdfa8ab4142a8a370708">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://gspvh.contest.codeforces.com/group/8uwwWH0E98/contest/307810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div style="padding:1em;margin:1em 14em 0 14em;text-align: center;" class="alert alert-info">
+            Statement is not available on English language
+        </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">B. Bể cá</div><div class="time-limit"><div class="property-title">time limit per test</div>1 second</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>aquarium.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>aquarium.out</div></div><div><p>Bạn có một chiếc bể cá siêu to khổng lồ với rất nhiều loài cá ở trong đó. Nhưng các loài cá vốn chẳng ưa nhau, chúng tranh giành thức ăn, không gian sinh tồn của nhau và điều này đã dẫn tới cuộc <span class="tex-font-style-it">Đại chiến loài cá lần thứ nhất</span>. Rất nhiều loài cá yêu quý của bạn đã hy sinh, một số khác trốn trong các hang đá, một số khác bị các loài cá khác ăn thịt. </p><p>Để duy trì hòa bình và ổn định phát triển trong bể cá, bạn quyết định chia bể cá thành lưới ô vuông gồm <span class="tex-span"><i>r</i></span> hàng và <span class="tex-span"><i>c</i></span> cột. Ở mỗi ô vuông, bạn xây dựng một bức tường ngăn cách, theo một trong hai đường chéo của ô vuông. Bức tường sẽ có dạng '/' hoặc '\'. Tùy theo nguy cơ xảy ra chiến tranh giữa các loài cá, các bức tường có độ dày mỏng khác nhau.</p><p>Nhiều năm đã trôi qua, các loài cá muốn chấm dứt xung đột và trở lại vui đùa cùng nhau. Để làm được điều này, chúng sẽ hợp tác lại để cùng nhau phá các bức tường mà bạn đã xây dựng. Do sức có hạn, chúng muốn phá đi các bức tường có tổng độ dày nhỏ nhất để sao cho bể cá không còn bị ngăn cách nữa. Chúng tự đặt ra câu hỏi, tổng độ dày dày của các bức tường cần phá là bao nhiêu, và chúng nên phá những bức tường nào?</p><p>Ví dụ, hình ảnh dưới đây thể hiện một bể cá có kích thước <span class="tex-span">2·2</span>. Trong trường hợp này, bầy cá cần phá đi các bức tường có bề dày lần lượt là <span class="tex-span">7</span>, <span class="tex-span">9</span> và <span class="tex-span">12</span>. Nét đứt màu xanh lam không phải vách ngăn, nó chỉ là đường biên thể hiện các ô của bể cá.</p><p><img class="tex-graphics" src="./Problems - Codeforces_files/2766d788ba7467becd7c085634917f125863f7d3.png" style="max-width: 100.0%;max-height: 100.0%;"></p></div><div class="input-specification"><div class="section-title">Input</div><ul> <li> Dòng đầu tiên chứa hai số nguyên dương <span class="tex-span"><i>r</i></span> và <span class="tex-span"><i>c</i></span> <span class="tex-span">(1 ≤ <i>r</i>·<i>c</i> ≤ 10<sup class="upper-index">6</sup>)</span>&nbsp;— số hàng và số cột của bể cá. </li><li> <span class="tex-span"><i>r</i></span> dòng tiếp theo, mỗi dòng chứa <span class="tex-span"><i>c</i></span> ký tự '/' hoặc '\' mô tả các bức tường của bể cá. </li><li> <span class="tex-span"><i>r</i></span> dòng cuối cùng, dòng thứ <span class="tex-span"><i>i</i></span> chứa <span class="tex-span"><i>c</i></span> số nguyên <span class="tex-span"><i>t</i><sub class="lower-index"><i>i</i>, 1</sub>, <i>t</i><sub class="lower-index"><i>i</i>, 2</sub>, ..., <i>t</i><sub class="lower-index"><i>i</i>, <i>c</i></sub></span> <span class="tex-span">(1 ≤ <i>t</i><sub class="lower-index"><i>i</i>, <i>j</i></sub> ≤ 10<sup class="upper-index">7</sup>)</span> thể hiện độ dày của các bức tường ở hàng thứ <span class="tex-span"><i>i</i></span>. </li></ul></div><div class="output-specification"><div class="section-title">Output</div><ul> <li> Dòng đầu tiên in ra một số nguyên dương là tổng độ dày nhỏ nhất của các bức tường cần phá đi. </li><li> <span class="tex-span"><i>r</i></span> dòng tiếp theo, dòng thứ <span class="tex-span"><i>i</i></span> chứa <span class="tex-span"><i>c</i></span> ký tự. Ký tự thứ <span class="tex-span"><i>j</i></span> là '.' nếu như bức tường ở ô hàng <span class="tex-span"><i>i</i></span> cột <span class="tex-span"><i>j</i></span> bị phá đi, nếu bức tường này không bị phá đi, in ra hướng ban đầu của bức tường. </li></ul><p>Nếu có nhiều phương án tối ưu, bạn được in ra phương án bất kỳ.</p></div><div><div class="section-title">Scoring</div><ul> <li> Subtask <span class="tex-span">1</span> (<span class="tex-span">30</span> điểm): <span class="tex-span"><i>r</i>·<i>c</i> ≤ 10<sup class="upper-index">1</sup></span>. </li><li> Subtask <span class="tex-span">2</span> (<span class="tex-span">45</span> điểm): <span class="tex-span"><i>r</i>·<i>c</i> ≤ 10<sup class="upper-index">5</sup></span>. </li><li> Subtask <span class="tex-span">3</span> (<span class="tex-span">25</span> điểm): <span class="tex-span"><i>r</i>·<i>c</i> ≤ 10<sup class="upper-index">6</sup></span>. </li></ul><p>Với mỗi test, bạn sẽ được <span class="tex-span">70%</span> số điểm khi in ra được chính xác chi phí tối thiểu.</p></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id00054499399834266216" id="id0027200003894275215" class="input-output-copier">Copy</div></div><pre id="id00054499399834266216">2 2
+\/
+\\
+7 10
+12 9
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id003738689533922983" id="id00004595173160853783" class="input-output-copier">Copy</div></div><pre id="id003738689533922983">28
+./
+..
+</pre></div><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id007165639297605999" id="id008495365898834011" class="input-output-copier">Copy</div></div><pre id="id007165639297605999">1 3
+/\\
+3 4 5
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id0025274183541482653" id="id003915839185757586" class="input-output-copier">Copy</div></div><pre id="id0025274183541482653">12
+...
+</pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div style="margin-bottom: 2em;">
+
+
+<div class="problemindexholder" problemindex="C" data-uuid="ps_613c9419107dfbb710e71c359390574da55659c3">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://gspvh.contest.codeforces.com/group/8uwwWH0E98/contest/307810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">C. Khủng bố</div><div class="time-limit"><div class="property-title">time limit per test</div>4.5 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>terrorists.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>terrorists.out</div></div><div><p>Khủng bố! Chỗ nào cũng thấy khủng bố!!! Tôi đã phải thốt lên như vậy sau khi xem bản tin về những vụ khủng bố đã xảy ra ngay tại nơi tôi sinh sống. Tôi bắt đầu linh cảm rằng, ngay cả trú ẩn trong nhà cũng không còn an toàn nữa.</p><p>Tôi đến sở cảnh sát và hỏi những người ở đây xem tôi có thể bảo vệ tính mạng mình như thế nào. Cảnh sát cho tôi xem một vài kế hoạch của những kẻ khủng bố. Tôi về nhà, nằm trên giường và vắt óc suy nghĩ làm sao để khai thác những thông tin này. Và đó là lý do tôi cần tới các bạn.</p><p>Mạng lưới giao thông chỗ nhà tôi có thể biểu diễn bởi các giao lộ và các tuyến đường hai chiều. Những tuyến đường hai chiều này đảm bảo việc di chuyển từ một giao lộ tới mọi giao lộ khác là luôn luôn khả thi. Những tên khủng bố thường hẹn nhau tại một giao lộ nào đó trước khi bắt đầu thực hiện âm mưu ghê rợn. Cảnh sát cho tôi biết địa điểm gặp nhau của bọn chúng và nơi thực sự chúng muốn tấn công. Trớ trêu thay, họ lại không biết thời gian hành động cụ thể và lực lượng của cảnh sát thì quá mỏng. Họ khó lòng có thể thiết lập hệ thống phòng vệ hiệu quả để đối phó với những đợt tấn công khủng bố. Một giải pháp tình thế được đưa ra, đó là lắp đặt camera an ninh tại các giao lộ, khi phát hiện khủng bố tới sẽ lập tức có mặt để bắt chúng. Phương pháp này rất kém hiệu quả bởi cảnh sát di chuyển quá chậm và khi tới nơi, bọn khủng bố đã không cánh mà bay.</p><p>Những tên khủng bố gian manh luôn chọn đường đi ngắn nhất để di chuyển. Nhưng cảnh sát thì chỉ số IQ lại quá hạn chế, và họ cần bạn giúp đỡ. Với mỗi kế hoạch khủng bố, cảnh sát cần bạn tìm ra độ dài đường đi ngắn nhất giữa điểm bọn khủng bố gặp nhau và nơi chúng định hành động. Nếu khoảng cách này là quá nhỏ, họ đã chẳng mất công tính toán làm gì.</p></div><div class="input-specification"><div class="section-title">Input</div><ul> <li> Dòng đầu tiên chứa số nguyên <span class="tex-span"><i>T</i></span> <span class="tex-span">(1 ≤ <i>T</i> ≤ 5)</span> - số bộ dữ liệu. </li><li> Mỗi bộ dữ liệu được mô tả trong một số dòng. Dòng đầu tiên chứa ba số nguyên <span class="tex-span"><i>N</i></span>, <span class="tex-span"><i>M</i></span> và <span class="tex-span"><i>Q</i></span> — số giao lộ, số tuyến đường hai chiều và số kế hoạch tấn công khủng bố. <span class="tex-span">(1 ≤ <i>N</i> ≤ 100000</span>, <span class="tex-font-style-bf"><span class="tex-span"><i>N</i> - 1 ≤ <i>M</i> ≤ <i>N</i> + 50</span></span>, <span class="tex-span">1 ≤ <i>Q</i> ≤ 50000)</span>. </li><li> <span class="tex-span"><i>M</i></span> dòng tiếp theo, mỗi dòng chứa ba số nguyen <span class="tex-span"><i>u</i></span>, <span class="tex-span"><i>v</i></span>, <span class="tex-span"><i>d</i></span> <span class="tex-span">(1 ≤ <i>u</i>, <i>v</i> ≤ <i>N</i>, 1 ≤ <i>d</i> ≤ 10000)</span>, thể hiện một con đường giữa hai giao lộ <span class="tex-span"><i>u</i></span> và <span class="tex-span"><i>v</i></span> có độ dài <span class="tex-span"><i>d</i></span>. Chú ý rằng có thể có nhiều tuyến đường nối cùng một cặp giao lộ. </li><li> <span class="tex-span"><i>Q</i></span> dòng cuối cùng, mỗi dòng chứa hai số nguyên <span class="tex-span"><i>s</i></span>, <span class="tex-span"><i>e</i></span> <span class="tex-span">(1 ≤ <i>s</i>, <i>e</i> ≤ <i>N</i>)</span>, mô tả một kế hoạch tấn công khủng bố, ở đó chúng gặp nhau ở giao lộ <span class="tex-span"><i>s</i></span> và sẽ hành động ở giao lộ <span class="tex-span"><i>e</i></span>. </li></ul></div><div class="output-specification"><div class="section-title">Output</div><p>Với mỗi bộ dữ liệu, in ra <span class="tex-span"><i>Q</i></span> dòng, dòng thứ <span class="tex-span"><i>i</i></span> chứa độ dài đường đi ngắn nhất từ điểm gặp gỡ đến điểm hành động của kế hoạch tấn công thứ <span class="tex-span"><i>i</i></span>.</p></div><div><div class="section-title">Scoring</div><p>Bài này chỉ có một file input. Gọi <span class="tex-span"><i>Q</i></span> là số dòng trong file output đúng ứng với input đó, <span class="tex-span"><i>P</i></span> là số dòng trong file output của bạn khớp với output của ban giám khảo. Số điểm bạn nhận được là <img align="middle" class="tex-formula" src="./Problems - Codeforces_files/fc58889d3a991e584478424f7cf6dcb0b3316d76.png" style="max-width: 100.0%;max-height: 100.0%;">.</p><p><span class="tex-font-style-bf">Chú ý</span>: Bạn không nhận được điểm nếu output của bạn sai định dạng (chứa nhiều hơn hoặc ít hơn <span class="tex-span"><i>Q</i></span> dòng, chứa kí tự lạ,...).</p></div><div class="sample-tests"><div class="section-title">Example</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id0045874825957789755" id="id006778347179220716" class="input-output-copier">Copy</div></div><pre id="id0045874825957789755">2<br>7 9 5<br>7 6 6114<br>5 3 5473<br>2 4 2601<br>5 4 8525<br>7 3 291<br>2 7 3363<br>1 6 399<br>6 4 4477<br>1 7 3075<br>6 3<br>4 4<br>3 1<br>2 3<br>7 3<br>3 2 1<br>1 3 1000<br>2 3 2000<br>1 2<br></pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id005469465651309031" id="id0013938009840121302" class="input-output-copier">Copy</div></div><pre id="id005469465651309031">3765<br>0<br>3366<br>3654<br>291<br>3000<br></pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div style="margin-bottom: 2em;">
+
+
+<div class="problemindexholder" problemindex="D" data-uuid="ps_f3179361a82a0c5a8abb7c9ae94d15ce3332c35c">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://gspvh.contest.codeforces.com/group/8uwwWH0E98/contest/307810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div style="padding:1em;margin:1em 14em 0 14em;text-align: center;" class="alert alert-info">
+            Statement is not available on English language
+        </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">D. Lại là bội số chung nhỏ nhất</div><div class="time-limit"><div class="property-title">time limit per test</div>0.75 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>primelcm.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>primelcm.out</div></div><div><p>Cho số nguyên dương <span class="tex-span"><i>n</i></span>. Gọi <span class="tex-span"><i>L</i></span> là bội số chung nhỏ nhất của các số <span class="tex-span">1, 2, ..., <i>n</i></span>. Gọi <span class="tex-span"><i>P</i></span> là tích các số nguyên tố từ <span class="tex-span">1</span> tới <span class="tex-span"><i>n</i></span>. Dễ thấy rằng <span class="tex-span"><i>L</i></span> chia hết cho <span class="tex-span"><i>P</i></span>. Tính <img align="middle" class="tex-formula" src="./Problems - Codeforces_files/0722a22fc149af683c791049e56562bf7d3a9c62.png" style="max-width: 100.0%;max-height: 100.0%;">.</p><p>Ví dụ, với <span class="tex-span"><i>n</i> = 5</span>, ta có <span class="tex-span"><i>L</i> = 60</span> và <span class="tex-span"><i>P</i> = 30</span>. Do đó gái trị cần tính là <span class="tex-span">2</span>.</p></div><div class="input-specification"><div class="section-title">Input</div><p>Dòng đầu tiên chứa số nguyên <span class="tex-span"><i>t</i></span> <span class="tex-span">(1 ≤ <i>t</i> ≤ 10<sup class="upper-index">5</sup>)</span>. Dòng thứ hai chứa <span class="tex-span"><i>t</i></span> số nguyên <span class="tex-span"><i>n</i><sub class="lower-index">1</sub>, <i>n</i><sub class="lower-index">2</sub>, ..., <i>n</i><sub class="lower-index"><i>t</i></sub></span> <span class="tex-span">(2 ≤ <i>n</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">14</sup>)</span>.</p></div><div class="output-specification"><div class="section-title">Output</div><p>In ra <span class="tex-span"><i>t</i></span> số nguyên, số thứ <span class="tex-span"><i>i</i></span> là kết quả của bài toán nêu trên với <span class="tex-span"><i>n</i> = <i>n</i><sub class="lower-index"><i>i</i></sub></span>. Các số được viết trên một dòng, ngăn cách với nhau bởi dấu cách.</p></div><div><div class="section-title">Scoring</div><ul> <li> Subtask <span class="tex-span">1</span> (<span class="tex-span">15</span> điểm): <span class="tex-span"><i>n</i><sub class="lower-index"><i>i</i></sub> ≤ 20</span>. </li><li> Subtask <span class="tex-span">2</span> (<span class="tex-span">10</span> điểm): <span class="tex-span"><i>t</i> ≤ 10</span> và <span class="tex-span"><i>n</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">6</sup></span>. </li><li> Subtask <span class="tex-span">3</span> (<span class="tex-span">25</span> điểm): <span class="tex-span"><i>n</i><sub class="lower-index"><i>i</i></sub> ≤ 10<sup class="upper-index">6</sup></span>. </li><li> Subtask <span class="tex-span">4</span> (<span class="tex-span">20</span> điểm): <span class="tex-span"><i>t</i> ≤ 10</span>. </li><li> Subtask <span class="tex-span">5</span> (<span class="tex-span">30</span> điểm): Không có ràng buộc gì thêm. </li></ul></div><div class="sample-tests"><div class="section-title">Example</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id007463996488340947" id="id00720339076975592" class="input-output-copier">Copy</div></div><pre id="id007463996488340947">5
+2 3 5 7 11
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id00010957482129412721" id="id0017356259691766396" class="input-output-copier">Copy</div></div><pre id="id00010957482129412721">1 1 2 2 12 
+</pre></div></div></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+        <div style="margin-bottom: 1em;">
+
+
+<div class="problemindexholder" problemindex="E" data-uuid="ps_f89a71d928b22dcef6eb87db3ecdceffeabc8afc">
+    <div style="display: none; margin:1em 0;text-align: center; position: relative;" class="alert alert-info diff-notifier">
+        <div>The problem statement has recently been changed. <a class="view-changes" href="https://gspvh.contest.codeforces.com/group/8uwwWH0E98/contest/307810/problems#">View the changes.</a></div>
+        <span class="diff-notifier-close" style="position: absolute; top: 0.2em; right: 0.3em; cursor: pointer; font-size: 1.4em;">×</span>
+    </div>
+        <div style="padding:1em;margin:1em 14em 0 14em;text-align: center;" class="alert alert-info">
+            Statement is not available on English language
+        </div>
+        <div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">E. Xếp hàng</div><div class="time-limit"><div class="property-title">time limit per test</div>1 second</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file" style="font-weight: bold"><div class="property-title">input</div>line.inp</div><div class="output-file" style="font-weight: bold"><div class="property-title">output</div>line.out</div></div><div><p><span class="tex-span"><i>n</i></span> học sinh trường THPT Chuyên KHTN đứng xếp hàng dự lễ chào cờ trong một buổi sáng nắng vàng và gió nhẹ. Các bạn tranh nhau đến sớm xếp hàng đầu, bởi trong lễ chào cờ hay có tiết mục vô cùng đặc sắc: Diễn văn phát biểu của thầy Lương. Diễn văn của thầy thường có gió chém phần phật, đảm bảo các học sinh đứng gần ai cũng lạnh cóng dù cái hè có oi bức chói chang đến mấy.</p><p><span class="tex-span"><i>n</i></span> học sinh có chiều cao lần lượt là <span class="tex-span"><i>h</i><sub class="lower-index">1</sub>, <i>h</i><sub class="lower-index">2</sub>, ..., <i>h</i><sub class="lower-index"><i>n</i></sub></span>. Họ sẽ xếp vào một hàng thẳng. Tuy nhiên, nếu một người đứng sau một ai đó cao hơn hẳn họ, họ sẽ bị che khuất tầm nhìn và do đó không thể nhìn thấy mái tóc xì-tai độc đáo của thầy Lương; và vì vậy họ sẽ tức giận kinh hoàng. Lớp trưởng&nbsp;— người phụ trách vị trí đứng của các bạn, vì thế muốn không quá <span class="tex-span"><i>k</i></span> bạn học sinh phải tức giận.</p><p>Hãy giúp lớp trưởng đếm số cách sắp xếp <span class="tex-span"><i>n</i></span> học sinh sao cho có không quá <span class="tex-span"><i>k</i></span> học sinh đứng sau một ai đó cao hơn hẳn họ. Hai cách sắp xếp được coi là khác nhau nếu tồn tại một bạn học sinh có vị trí đứng khác nhau trong hai cách này. Do số cách có thể rất lớn, bạn chỉ cần in ra kết quả theo modulo <span class="tex-span">998244353</span>.</p></div><div class="input-specification"><div class="section-title">Input</div><p>Dòng đầu tiên chứa số nguyên <span class="tex-span"><i>t</i></span> <span class="tex-span">(1 ≤ <i>t</i> ≤ 6)</span>&nbsp;— số thứ tự của subtask chứa test này.</p><p>Dòng thứ hai chứa hai số nguyên <span class="tex-span"><i>n</i></span> và <span class="tex-span"><i>k</i></span> <span class="tex-span">(1 ≤ <i>n</i> ≤ 2·10<sup class="upper-index">5</sup>, 0 ≤ <i>k</i> ≤ 300)</span>&nbsp;— số học sinh trong lớp và số học sinh tối đa có thể tức giận.</p><p>Dòng thứ ba chứa <span class="tex-span"><i>n</i></span> số nguyên <span class="tex-span"><i>h</i><sub class="lower-index">1</sub>, <i>h</i><sub class="lower-index">2</sub>, ..., <i>h</i><sub class="lower-index"><i>n</i></sub></span> <span class="tex-span">(1 ≤ <i>h</i><sub class="lower-index"><i>i</i></sub> ≤ <i>n</i>)</span>&nbsp;— chiều cao của <span class="tex-span"><i>n</i></span> học sinh.</p></div><div class="output-specification"><div class="section-title">Output</div><p>Gồm một số nguyên duy nhất là số cách sắp xếp học sinh modulo <span class="tex-span">998244353</span>.</p></div><div><div class="section-title">Scoring</div><ul> <li> Subtask <span class="tex-span">1</span> (<span class="tex-span">15</span> điểm): <span class="tex-span"><i>k</i> = 0</span>. </li><li> Subtask <span class="tex-span">2</span> (<span class="tex-span">15</span> điểm): <span class="tex-span"><i>n</i> ≤ 10</span>. </li><li> Subtask <span class="tex-span">3</span> (<span class="tex-span">15</span> điểm): <span class="tex-span"><i>n</i> ≤ 20</span>. </li><li> Subtask <span class="tex-span">4</span> (<span class="tex-span">15</span> điểm): <span class="tex-span"><i>h</i><sub class="lower-index"><i>i</i></sub> ≤ 2</span>. </li><li> Subtask <span class="tex-span">5</span> (<span class="tex-span">15</span> điểm): Các giá trị của <span class="tex-span"><i>h</i><sub class="lower-index"><i>i</i></sub></span> đôi một phân biệt. </li><li> Subtask <span class="tex-span">6</span> (<span class="tex-span">25</span> điểm): Không có ràng buộc gì thêm. </li></ul></div><div class="sample-tests"><div class="section-title">Examples</div><div class="sample-test"><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id008202337023581627" id="id00763261347516464" class="input-output-copier">Copy</div></div><pre id="id008202337023581627">4
+3 1
+1 1 2
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id005588830251021033" id="id00626554122227521" class="input-output-copier">Copy</div></div><pre id="id005588830251021033">4
+</pre></div><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id007392043556524492" id="id0036274996470552145" class="input-output-copier">Copy</div></div><pre id="id007392043556524492">5
+5 2
+1 2 3 4 5
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id009795850641807493" id="id0004324301194460278" class="input-output-copier">Copy</div></div><pre id="id009795850641807493">46
+</pre></div><div class="input"><div class="title">Input<div title="Copy" data-clipboard-target="#id008489139268749271" id="id00045000058494932604" class="input-output-copier">Copy</div></div><pre id="id008489139268749271">1
+7 0
+1 1 1 1 1 1 1
+</pre></div><div class="output"><div class="title">Output<div title="Copy" data-clipboard-target="#id001755335322683993" id="id007192908075116888" class="input-output-copier">Copy</div></div><pre id="id001755335322683993">5040
+</pre></div></div></div><div class="note"><div class="section-title">Note</div><p>Trong ví dụ đầu tiên, ta không thể để người thứ <span class="tex-span">3</span> (có chiều cao <span class="tex-span">2</span>) đứng đầu hàng vì người này sẽ che khuất tầm nhìn của hai người còn lại. Do đó trong <span class="tex-span">6</span> cách xếp <span class="tex-span">3</span> người, có <span class="tex-span">2</span> cách không thỏa mãn. Vậy số cách xếp hàng hợp lệ là <span class="tex-span">4</span>.</p><p>Trong ví dụ thứ ba, tất cả mọi người có cùng chiều cao nên không ai che tầm mắt của ai. Tất cả <span class="tex-span">7! = 5040</span> cách xếp hàng đều hợp lệ.</p></div></div><p>  </p></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+
+        if (!endsWith(inputFile, "standard input")
+            && !endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")
+            && !endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+
+    });
+</script>
+        </div>
+    </div>
+
+    <br style="clear: both;">
+
+    <div id="footer">
+        <div><a href="https://gspvh.contest.codeforces.com/">Codeforces</a> (c) Copyright 2010-2020 Mike Mirzayanov</div>
+        <div>The only programming contests Web 2.0 platform</div>
+
+    </div>
+
+</div>
+</div>
+
+
+<div id="datepick-div" style="display: none;"></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 42px; padding-right: 42px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; min-width: 0px; max-width: none; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size1, sans-serif;"></div></div></body></html>
